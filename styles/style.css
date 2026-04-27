@@ -274,3 +274,95 @@ body {
     align-content: center;
   }
 }
+
+.flip-card {
+  perspective: 1200px;
+  min-height: 560px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card.is-flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  inset: 0;
+  background-color: var(--surface);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(58, 38, 27, 0.06);
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.flip-back h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.flip-back p {
+  color: var(--muted);
+  margin-bottom: 0.7rem;
+}
+
+.product-image {
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.product-cta {
+  margin-top: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  background-color: var(--text);
+  color: #fff;
+  font-size: 0.72rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.product-cta:hover {
+  transform: translateY(-3px);
+  background-color: var(--accent);
+}
+
+.cta-icon {
+  font-size: 1.05rem;
+}
+
+.back-button {
+  margin-top: 1rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  text-decoration: underline;
+  cursor: pointer;
+}
