@@ -251,6 +251,77 @@ body {
   color: var(--muted);
 }
 
+/* Ajustes de responsividade dos cards flip */
+
+.flip-card,
+.flip-inner {
+  min-height: 620px;
+}
+
+.flip-front,
+.flip-back {
+  border-radius: 18px;
+}
+
+.flip-back {
+  overflow-y: auto;
+  align-content: start;
+  place-content: initial;
+}
+
+.flip-back h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  margin: 0.7rem 0 0.3rem;
+}
+
+/* Ajustes para celular */
+@media (max-width: 767px) {
+  .container {
+    width: min(100% - 1.5rem, var(--container));
+  }
+
+  .brand {
+    font-size: 1rem;
+    letter-spacing: 0.22em;
+  }
+
+  .site-nav {
+    gap: 0.8rem;
+  }
+
+  .hero {
+    padding-bottom: 3rem;
+  }
+
+  .hero-media img {
+    height: 320px;
+  }
+
+  .hero-actions,
+  .btn,
+  .product-cta {
+    width: 100%;
+  }
+
+  .flip-card,
+  .flip-inner {
+    min-height: 680px;
+  }
+
+  .flip-back {
+    padding: 1.4rem;
+  }
+
+  .flip-back h3 {
+    font-size: 2rem;
+  }
+
+  .product-image img {
+    height: 280px;
+  }
+}
+
 @media (min-width: 768px) {
   .site-header {
     padding-top: 1.6rem;
@@ -366,3 +437,7 @@ body {
   text-decoration: underline;
   cursor: pointer;
 }
+
+  .products-grid {
+    align-items: stretch;
+  }
