@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://casadopaodemelbh.com.br/sitemap.xml
